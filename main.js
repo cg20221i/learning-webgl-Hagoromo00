@@ -21,7 +21,9 @@ function main() {
       var vertexShaderCode = `
       attribute vec2 aPosition;
       void main () {
-        gl_PointSize = 15.0;  // adding size of point
+        gl_PointSize = 15.0;  
+        // adding size of point
+
         gl_Position = vec4(aPosition, 0.0, 1.0);
         // is the final destination for storing
         // positional data for the rendered vertex
@@ -36,6 +38,7 @@ function main() {
     
       // FRAGMENT SHADER
       var fragmentShaderCode = `
+            precision mediump float;
             void main () {
               // final color for (they need to render in particular fragment) fev1/fec2 dll is for vector
               // final destinarion for storing 
