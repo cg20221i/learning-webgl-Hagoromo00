@@ -10,7 +10,7 @@ function main() {
         C ( -0.5, 0.5)
       */
     
-      var vertices = [0.5, 0.5, 0.0, 0.0, -0.5, 0.5];
+      var vertices = [0.5, 0.5, 0.0, 0.0, -0.5, 0.5, 0.0 , 1.0];
     
       // Create a linked-list for storing the vertices data in GPU realm
       var buffrer = gl.createBuffer();
@@ -69,5 +69,5 @@ function main() {
     
       // draw the canvas using drawArrays
       // glPOINTS (Assembly)
-      gl.drawArrays(gl.POINT, 0, 3);
+      gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
     }
